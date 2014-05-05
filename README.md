@@ -5,6 +5,26 @@ Visualizes Grails Service and Controller Dependencies using Graphviz
 
 Simple tool I wrote one afternoon to visualize complex Grails apps I was working with. See [my blog post](http://ilikeorangutans.github.io/2014/05/03/using-golang-and-graphviz-to-visualize-complex-grails-applications/) about the topic. 
 
+Build
+-----
+
+You'll need [Go](http://golang.org/) installed. Build by running `go build` or `go install` if you have your GOPATH set up properly. 
+
+Also you will need a [GraphViz](http://graphviz.org/Download.php) installation.
+
+Using 
+-----
+
+Assuming you're in the directory where the grails-service-visualizer binary lives:
+
+    grails-service-visualizer /path/to/grails-application
+    
+This will create a `grails-application.dot` file which you can then run through GraphViz:
+
+    dot -Tpng grails-application.dot -o grails-application.png
+    
+Enjoy. 
+
 To Do
 -----
 

@@ -109,21 +109,6 @@ func addEntity(graph *gographviz.Graph, name string) {
 
 }
 
-func EndsWith(haystack, needle string) bool {
-	if len(haystack) == 0 {
-		return false
-	}
-	lastIndex := strings.LastIndex(haystack, needle)
-
-	if lastIndex < 0 {
-		return false
-	}
-
-	expectedIndex := len(haystack) - len(needle)
-	return lastIndex == expectedIndex
-
-}
-
 func buildListOfFiles(dir string) []string {
 
 	startDir, err := os.Open(dir)
